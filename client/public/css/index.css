@@ -24,3 +24,8 @@ body {
     border-radius: 12px;
     padding: 16px 20px;
 }
+
+body {
+  background-image: url('/images/campus.png');
+  background-repeat: no-repeat;
+}
