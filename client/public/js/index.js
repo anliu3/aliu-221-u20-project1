@@ -3,6 +3,7 @@
  */
 
 document.body.onkeyup = function checkKeyPress(e) {
+  console.log('Hello')
   if (e.key == " " ||
     e.code == 'Space' ||
     e.keyCode == 32

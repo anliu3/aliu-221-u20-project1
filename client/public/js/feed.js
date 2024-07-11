@@ -1,10 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    function goToMaristEdu() {
-        goToLocation('https://marist.edu');
-    }
+//document.getElementById('portal_button').addEventListener('click', goToLocation("https://www.marist.edu/"))
+//document.getElementById('portal_button_text').addEventListener('click', goToLocation("https://www.marist.edu/"))
 }
-,document.getElementById('portal_button').addEventListener('click', goToMaristEdu)
-,document.getElementById('portal_button_text').addEventListener('click', goToMaristEdu)
 );
 
 let currentStories = [];
@@ -30,23 +27,20 @@ let currentStories = [];
         imageUrl: 'images/hancock.jpeg'
     });
 
-    console.log(currentStories);
-
     function displayItem(FeedItem) {
         let newsfeedElement = document.getElementById('newsfeed');
 
-        let itemHTML =
+        newsfeedElement.innerHTML += `
             <div class = "feed-item">
-                <h2><a href = '${feedItem.linkUrl}' target = '_blank'>${FeedItem.Title}</a></h2>
+                <h2><a href = "${FeedItem.linkUrl}" target = "_blank">${FeedItem.Title}</a></h2>
                 <p>${FeedItem.Body}</p>
-                <a href ='${feedItem.linkUrl}' target = '_blank'>
-                    <img src = "${feedItem.imageUrl}" alt ="${feedItem.Title}" style = "max-width: 20%; height: 15%"></img>
+                <a href ="${FeedItem.linkUrl}" target = "_blank">
+                    <img src = "${FeedItem.imageUrl}" alt ="${FeedItem.Title}" style = "max-width: 20%; height: 15%"></img>
                 </a>
-            </div>
-    ;
-    newsfeedElement.innerHTML += itemHTML;
+                </div>
+             
+    `;
 }
 
-currentStories.forEach(function(item) {
-    displayItem(item);
-});
+for(i=0; i<currentStories.length; i++) 
+    displayItem(currentStories[i]);
