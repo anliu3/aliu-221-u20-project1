@@ -16,7 +16,6 @@ header {
 
 main {
 	display: grid;
-	padding-top: 60px;
 	justify-content: center;
 }
 
@@ -39,6 +38,8 @@ footer {
 a {
 	color: blue;
 	text-decoration: none;
+	text-decoration: underline;
+	font-size: 15px;
 }
 
 #redfox{
@@ -49,11 +50,11 @@ a {
 }
 
 #newsfeed {
-	max-width: 600px;
-	min-width: 600px;
+	max-width: 300px;
+	min-width: 300px;
 }
 
 .feedImage {
-	max-width: 150px;
-	max-height: 150px;
+	max-width: 90px;
+	max-height: 90px;
 }
