@@ -1,6 +1,15 @@
 const FeedItem = require('../models/feedItem');
 
 let feedItems = [];
+
+let feedItem1 = FeedItem.createFeedItem('Hi', 'Bye', 'linkUrl', 'imageUrl');
+let feedItem2 = FeedItem.createFeedItem('Hi', 'Bye', 'linkUrl', 'imageUrl');
+let feedItem3 = FeedItem.createFeedItem('Hi', 'Bye', 'linkUrl', 'imageUrl');
+
+feedItems.push(feedItem1);
+feedItems.push(feedItem2);
+feedItems.push(feedItem3);
+
 let latestId = 0;
 
 const getNextId = () => {

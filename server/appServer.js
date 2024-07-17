@@ -10,10 +10,10 @@ const app = express();
 app.use(bodyParser.json({ type: 'application/json' }));
 
 app.route('/api/feed')
-    .get(feedController.getAllFeedItem)
+    .get(feedController.getAllFeedItems)
     .post(feedController.saveFeedItem);
 
-app.route('/api/feed/:id')
+app.route('/api/feed/:feedItemID')
     .get(feedController.getFeedItemById)
     .delete(feedController.deleteFeedItemById)
     .patch(feedController.updateFeedItemById);

@@ -1,4 +1,4 @@
-function FeedItem(title, body, linkUrl, imageUrl) {
+function feedItem(title, body, linkUrl, imageUrl) {
     this.title = title;
     this.body = body;
     this.linkUrl = linkUrl;
@@ -6,7 +6,7 @@ function FeedItem(title, body, linkUrl, imageUrl) {
 }
 
 exports.createFeedItem = function (title, body, linkUrl, imageUrl) {
-    return new FeedItem(title, body, linkUrl, imageUrl);
+    return new feedItem(title, body, linkUrl, imageUrl);
 };
 
 //module.exports = FeedItem;
