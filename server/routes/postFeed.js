@@ -9,14 +9,8 @@ router.route('/api/feed')
 router.route('/api/feed/:id')
     .get(feedController.getFeedItemById)
     .delete(feedController.deleteFeedItemById)
+    .put(feedController.putFeedItemById)
     .patch(feedController.updateFeedItemById);
-
-// router.route("/api/items")
-//     .get(feedController.getAllItems);
-
-/* const feedRoute = require('./routes/postFeed');
-app.use('/api/users', feedRoute);
- */
 
 module.exports = router;
 

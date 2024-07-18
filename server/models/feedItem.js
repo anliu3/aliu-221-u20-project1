@@ -8,7 +8,3 @@ function feedItem(title, body, linkUrl, imageUrl) {
 exports.createFeedItem = function (title, body, linkUrl, imageUrl) {
     return new feedItem(title, body, linkUrl, imageUrl);
 };
-
-//module.exports = FeedItem;
-
-//add function? exports.getAllFeedItems
