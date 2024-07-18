@@ -2,9 +2,9 @@ const FeedItem = require('../models/feedItem');
 
 let feedItems = [];
 
-let feedItem1 = FeedItem.createFeedItem('Hi', 'Bye', 'linkUrl', 'imageUrl');
-let feedItem2 = FeedItem.createFeedItem('Hi', 'Bye', 'linkUrl', 'imageUrl');
-let feedItem3 = FeedItem.createFeedItem('Hi', 'Bye', 'linkUrl', 'imageUrl');
+let feedItem1 = FeedItem.createFeedItem('Marist Academics', 'bye1', 'linkUrl', 'imageUrl');
+let feedItem2 = FeedItem.createFeedItem('Marist Athletics', 'Bye2', 'linkUrl', 'imageUrl');
+let feedItem3 = FeedItem.createFeedItem('Marist Student Life', 'Bye3', 'linkUrl', 'imageUrl');
 
 feedItems.push(feedItem1);
 feedItems.push(feedItem2);
@@ -29,14 +29,21 @@ exports.saveFeedItem = function (req, res) {
     res.send(newFeedItem);
 };
 
+/* exports.getFeedItems = function (req, res) {
+    res.setHeader('Content-Type', 'applicaton/json');
+    res.send(feedItems);
+} */
+
 exports.getFeedItemById = function (req, res) {
-    const feedItem = feedItems.find(item => item.id == req.params.id);
+    /* const feedItem = feedItems.find(item => item.id == req.params.id);
     if (feedItem) {
         res.setHeader('Content-Type', 'application/json');
-        res.send(feedItem);
+        res.send(feedItems);
     } else {
         res.status(404).send('Feed Item not found.');
-    }
+    } */
+        res.setHeader('Content-Type', 'application/json');
+        res.send(feedItems[req.params.id]);
 };
 
 exports.deleteFeedItemById = function (req, res) {
@@ -56,8 +63,8 @@ exports.updateFeedItemById = function (req, res) {
     }
 };
 
-//let items = require("../models/feedItem.js");
 
+//let items = require("../models/feedItem.js");
 //exports.getAllItems = (req, res) => {
     //2 parameters
     //res.setHeader('Content-Type', 'application/json');
